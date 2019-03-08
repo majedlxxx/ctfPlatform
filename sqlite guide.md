@@ -1,4 +1,4 @@
-#Data types:
+<h3>Data types:</h3>
 	TEXT
 	CHARACTER
 	VARCHAR(size)
@@ -13,14 +13,14 @@
 	--------
 	BOOLEAN
 
-#Constrains:
+<h3>Constrains:</h3>
 	NOT NULL
 	CHECK
 	primary key
 	default
 	unique
 	
-#Commands:
+<h3>Commands:</h3>
 	.tables
 	.mode column
 	.mode csv
