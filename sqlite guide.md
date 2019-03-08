@@ -53,11 +53,12 @@
 </li>
 
 <li><h3>Insert into table</h3>
-	<insert into tableName values(1,"text");		
+	<ul>
+		<li>insert into tableName values(1,"name");</li>
+		<li>insert into tableName("name") values("name");</li>
+	</ul>
 </li>
-insert into tname values(1,"majed");
-insert into tname(name) values("majed2");
-drop table tname;
+
 
 
 
