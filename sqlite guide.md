@@ -1,4 +1,5 @@
 <h3>Data types:</h3>
+<code>
 	TEXT
 	CHARACTER
 	VARCHAR(size)
@@ -12,15 +13,17 @@
 	DATETIME (2019-03-08 18:39:38)
 	--------
 	BOOLEAN
-
+</code>
 <h3>Constrains:</h3>
+<code>	
 	NOT NULL
 	CHECK
 	primary key
 	default
 	unique
-	
+</code>	
 <h3>Commands:</h3>
+<code>	
 	.tables
 	.mode column
 	.mode csv
@@ -31,7 +34,7 @@
 	.show
 	.output
 	.dump
-
+</code>
 sqlite3 database.db
 
 
