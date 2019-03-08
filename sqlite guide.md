@@ -45,11 +45,11 @@
 </li>
 
 <li><h3>Creating a table</h3>
-<li>create table tableName (<br>
+<ul><li>create table tableName (<br>
 	col_name data_type constrains,<br>
 	...<br>
 	...<br>
-);</li>
+);</li></ul>
 </li>
 
 <li><h3>Insert into table</h3>
