@@ -44,20 +44,21 @@
 	<h3>Creating a database file: sqlite3 database.db</h3>
 </li>
 
-<li>
-<h3>Creating a table</h3>
+<li><h3>Creating a table</h3>
 <li>create table tableName (<br>
 	col_name data_type constrains,<br>
 	...<br>
 	...<br>
 );</li>
-create table tname(id integer primary key,
-name text);
+</li>
+
+<li><h3>Insert into table</h3>
+	<insert into tableName values(1,"text");		
+</li>
 insert into tname values(1,"majed");
 insert into tname(name) values("majed2");
 drop table tname;
 
 
-</li> <!-- creating table list -->
 
 </ul>
