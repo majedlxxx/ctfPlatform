@@ -40,9 +40,9 @@
 
 
 
-</ul>
-sqlite3 database.db
-
+<li>
+	<h3>Creating a database file: </h3>sqlite3 database.db
+</li>
 
 create table tname(id ineteger primary key,
 name text);
@@ -51,3 +51,4 @@ insert into tname(name) values("majed2");
 drop table tname;
 
 
+</ul>
