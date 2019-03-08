@@ -59,7 +59,13 @@
 	</ul>
 </li>
 
-
+<li><h3>Select from table</h3></li>
+	<ul>
+		<li>select * from tableName;</li>
+		<li>select col1, col2 from tableName;</li>
+		<li>SELECT col1, col2 FROM tableName WHERE id>5;</li>
+		<li>SELECT col1, col2 FROM tableName WHERE name="Name";</li>
+	</ul>
 
 
 </ul>
