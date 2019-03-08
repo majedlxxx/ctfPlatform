@@ -46,7 +46,12 @@
 
 <li>
 <h3>Creating a table</h3>
-create table tname(id ineteger primary key,
+<li>create table tableName (<br>
+	col_name data_type constrains,<br>
+	...<br>
+	...<br>
+);</li>
+create table tname(id integer primary key,
 name text);
 insert into tname values(1,"majed");
 insert into tname(name) values("majed2");
