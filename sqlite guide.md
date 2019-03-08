@@ -41,14 +41,16 @@
 
 
 <li>
-	<h3>Creating a database file: </h3>sqlite3 database.db
+	<h3>Creating a database file: sqlite3 database.db</h3>
 </li>
 
+<li>
+<h3>Creating a table</h3>
 create table tname(id ineteger primary key,
 name text);
 insert into tname values(1,"majed");
 insert into tname(name) values("majed2");
 drop table tname;
-
+</li>
 
 </ul>
