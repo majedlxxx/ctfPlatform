@@ -56,6 +56,8 @@ name text);
 insert into tname values(1,"majed");
 insert into tname(name) values("majed2");
 drop table tname;
-</li>
+
+
+</li> <!-- creating table list -->
 
 </ul>
