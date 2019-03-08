@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>admin</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<a href="/">Home page</a>
+	<h1>Admin panel</h1>
+
+	<h3>login</h3>
+	<form class="form-group" action="/login" method="POST">
+		<input type="text" name="username"><br>
+		<input type="password" name="password"><br>
+		<input type="submit" name="submit">
+	</form>
+
+
+	<h3>add a new user</h3>
+
+	<form class="form-group" action="/newuser" method="POST">
+		<p>
+			<b>Choose a new user name</b><br>
+			<input type="text" name="username" placeholder="username">
+		</p>
+		<p>
+			<b>Choose a new password</b><br>
+			<input type="password" name="password" placeholder="password">
+		</p>
+		<p>
+			<b>Confirm your password</b><br>
+			<input type="password" name="password2" placeholder="password confirmation">
+		</p>
+		<p>
+			<b>Admin password</b><br>
+			<input type="password" name="adminpass" placeholder="admin password">
+		</p>
+		<input type="submit" name="submit" class="btn btn-primary">
+	</form><br><br>
+
+	<h3>Add new challenge</h3>
+	<form class="form-group">
+		<p>
+			<b>Enter the challenge name</b><br>
+			<input type="text" name="name">
+		</p>
+
+		<p>
+			<b>Enter the challenge score </b><br>
+			<input type="number" name="score" min="1" max="500">
+		</p>
+		<p>
+			<b>Enter related files name</b><br>
+			<input type="text" name="fileName">
+		</p>
+		<input type="submit" name="submit" class="btn btn-primary">
+	</form>
+
+</body>
+</html>
