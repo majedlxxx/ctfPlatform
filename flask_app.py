@@ -1,21 +1,13 @@
 from flask import Flask, request, jsonify, render_template                                                                       
 import os           
 import hashlib
-import sqlite3
+from database import *
 
 def hash(string):
 	hashedPass=hashlib.md5(string.encode()).digest()
 	hashedPass=hashedPass.hex()
 	return hashedPass
 
-def saveUser(nu):
-	database=open("database","a")
-	database.write(nu["username"]+":"+nu["password"]+"\n")
-	database.close()
-                                                                                                       
-def listUsers():
-	users=open("database","r").read().split("\n")
-	return users
 
                                                                                                            
 app = Flask(__name__)       
