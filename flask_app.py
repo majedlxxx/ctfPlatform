@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template                                                                       
 import os           
 import hashlib
+import sqlite3
 
 def hash(string):
 	hashedPass=hashlib.md5(string.encode()).digest()
