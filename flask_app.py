@@ -2,13 +2,18 @@ from flask import Flask, request, jsonify, render_template
 import os           
 import hashlib
 
+def hash(string):
+	hashedPass=hashlib.md5(string.encode()).digest()
+	hashedPass=hashedPass.hex()
+	return hashedPass
+
 def saveUser(nu):
 	database=open("database","a")
 	database.write(nu["username"]+":"+nu["password"]+"\n")
 	database.close()
                                                                                                        
 def listUsers():
-	users=open("database","r").readlines()
+	users=open("database","r").read().split("\n")
 	return users
 
                                                                                                            
@@ -17,13 +22,23 @@ app = Flask(__name__)
 def home():
 	return "<h1>Hello</h1>"
 
+@app.route("/user",methods=["GET"])
+def user():
+	return open("user.html", "r").read()
 
 @app.route("/login" , methods=['POST'])
 def login():
-	data=request.form
-	username=data["username"]
-	password=data["password"]
-	return username+":"+password
+	form=request.form
+	username=form["username"]
+	password=form["password"]
+	password=hash(password)
+	print("*"*10)
+	print(username+":"+password)
+	print(listUsers())
+	if (username+":"+password) in listUsers():
+		return "<h1>You have logged in successfuly</h1>"
+	else:
+		return '<h1>Invalid credentials</h1><a href="/user">try again</a>'
 
 
 
@@ -45,8 +60,7 @@ def newUser():
 	if pass1!=pass2:
 		return "Passwords didn't match"
 
-	hashedPass=hashlib.md5(pass1.encode()).digest()
-	hashedPass=hashedPass.hex()
+	hashedPass=hash(pass1)
 	nu={}
 	nu["username"]=username
 	nu["password"]=hashedPass

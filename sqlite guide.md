@@ -67,5 +67,12 @@
 		<li>SELECT col1, col2 FROM tableName WHERE name="Name";</li>
 	</ul>
 
+<li><h3>Delete from table</h3>
+	<ul>
+		<li>DELETE FROM tname WHERE id=1;</li>
+		<li>DELETE FROM tname WHERE 1=1;</li>
+	</ul>
+</li>
+
 
 </ul>
