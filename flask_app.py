@@ -25,10 +25,8 @@ def login():
 	username=form["username"]
 	password=form["password"]
 	password=hash(password)
-	print("*"*10)
-	print(username+":"+password)
-	print(listUsers())
-	if (username+":"+password) in listUsers():
+
+	if validateLogin(username,password):
 		return "<h1>You have logged in successfuly</h1>"
 	else:
 		return '<h1>Invalid credentials</h1><a href="/user">try again</a>'
