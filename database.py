@@ -9,20 +9,27 @@ def saveUser(nu):
 	command+='");'
 	conn.execute(command)
 	conn.commit()
-	conn.close()
+	conn.close()	
                                                                                                        
 def listUsers():
-	conn=sqlite3.connect("ctf.db")
-	cursor=conn.execute("select * from account;")
-	users=cursor.fetchall()
-	return users
+	try:
+		conn=sqlite3.connect("ctf.db")
+		cursor=conn.execute("select * from account;")
+		users=cursor.fetchall()
+		return users
+	except:
+		return "SQL error"
 
 def validateLogin(username,password):
-	conn=sqlite3.connect("ctf.db")
-	command='select username from account where username="'+username+'" and password="'+password+'";'
-	print(command)
-	cursor=conn.execute(command)
-	return len(cursor.fetchall())>0
+	try:
+		conn=sqlite3.connect("ctf.db")
+		command='select username from account where username="{}" and password="{}"'.format(username,password)
+		print(command)
+		cursor=conn.execute(command)
+		return len(cursor.fetchall())>0
+	except:
+		return False
+
 
 
 

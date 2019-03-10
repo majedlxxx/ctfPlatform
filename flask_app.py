@@ -24,6 +24,9 @@ def login():
 	form=request.form
 	username=form["username"]
 	password=form["password"]
+	password=password.strip("\n").strip(" ")
+	if len(password)<5 or "--" in username:
+		return '<h1>Invalid credentials</h1><a href="/user">try again</a>'
 	password=hash(password)
 
 	if validateLogin(username,password):
